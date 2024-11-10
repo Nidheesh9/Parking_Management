@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.background{
+    background-image: url('./material/Parking_car.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
