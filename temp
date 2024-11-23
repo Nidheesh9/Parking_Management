@@ -1,0 +1,65 @@
+    const getUnparkedCars = async () => {
+        try { 
+            const response = await fetch(`${host}/api/user/getUnparkedCars`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "auth-token": localStorage.getItem('auth-token'),
+                }
+            });
+            const json = await response.json();
+            if (!json.success) {
+                throw new Error(json.message || 'Unparked Car fetching failed');
+            }
+            // toast.success("Car Details Fetched");
+            return json;
+        }
+        catch (error) {
+            console.log({ update: "Cannot Fetched Unparked car", error: error });
+            return;
+        }
+    }
+
+    const getParkedCars = async () => {
+        try { 
+            const response = await fetch(`${host}/api/user/getParkedCars`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "auth-token": localStorage.getItem('auth-token'),
+                }
+            });
+            const json = await response.json();
+            if (!json.success) {
+                throw new Error(json.message || 'Parked Car fetching failed');
+            }
+            // toast.success("Car Details Fetched");
+            return json;
+        }
+        catch (error) {
+            console.log({ update: "Cannot Fetched Parked car", error: error });
+            return;
+        }
+    }
+
+    const removeParkedCar = async ({car_id}) => {
+        try { 
+            const response = await fetch(`${host}/api/user/removeFromParking`, {
+                method: "POST",
+                headers:{
+                    "Content-Type": "application/json"
+                },
+                body : JSON.stringify({car_id}),
+            });
+            const json = await response.json();
+            if (!json.success) {
+                throw new Error(json.message || 'Parked Car removing failed');
+            }
+            toast.success("Car Removed");
+            return;
+        }
+        catch (error) {
+            console.log({ update: "Cannot remove Parked car", error: error });
+            return;
+        }
+    }
