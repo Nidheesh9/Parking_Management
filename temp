@@ -224,3 +224,9 @@ exports.delete_car_from_parking = async (req, res) => {
         .json({ message: "Unexpected error", error: err, success: false });
     }
 };
+
+
+//new
+router.post('/getUnparkedCars', fetchuser, get_unparked_cars);
+router.post('/getParkedCars', fetchuser, get_parked_cars);
+router.post('/removeFromParking', delete_car_from_parking);
