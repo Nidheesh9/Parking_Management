@@ -1,4 +1,19 @@
-    const getUnparkedCars = async () => {
+  const adminPaths = [
+    '/adminLogin',
+    '/adminSignup',
+    '/admin',
+    '/registeredUsers',
+    '/restrictUsers',
+    '/removeUser',
+    '/parkingLocations',
+    '/emptySlots',
+    '/occupiedSlots',
+    '/createParkingSlot',
+    '/deleteParkingSlot',
+    '/slots',
+    '/registeredCars'
+  ];
+const getUnparkedCars = async () => {
         try { 
             const response = await fetch(`${host}/api/user/getUnparkedCars`, {
                 method: "POST",
