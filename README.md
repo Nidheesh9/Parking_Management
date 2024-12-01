@@ -30,9 +30,6 @@ The **Parking Management System** is designed to efficiently allocate parking sp
 - **Vehicle Registration**: Allows users to register their vehicle details for parking access.
 - **Parking Spot Reservation**: Users can reserve parking spots in advance, ensuring availability.
 - **Parking Space Utilization Reports**: Admins can view reports to optimize parking space usage.
-- **User Authentication**: Secure login and registration with JWT-based authentication.
-- **Responsive UI**: Built with ReactJS and Tailwind CSS for a smooth, mobile-friendly interface.
-
 ---
 
 ### Technologies Used
@@ -40,7 +37,7 @@ The **Parking Management System** is designed to efficiently allocate parking sp
 - **Frontend**:
   - **ReactJS**: For building the interactive user interface.
   - **Tailwind CSS**: For styling and responsive design.
-  - **Axios**: For making HTTP requests to the backend.
+  - **Fetch**: For making HTTP requests to the backend.
 
 - **Backend**:
   - **NodeJS**: For server-side JavaScript handling.
@@ -100,9 +97,3 @@ The **Parking Management System** is designed to efficiently allocate parking sp
 ### Contributing
 
 Feel free to fork the repository, make improvements, and create pull requests. Contributions are welcome!
-
----
-
-### License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
