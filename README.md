@@ -76,7 +76,7 @@ The **Parking Management System** is designed to efficiently allocate parking sp
 5. **Run the application**:
    - **Backend**: Start the Node.js server:
      ```bash
-     npm run server
+     npm run serve
      ```
    - **Frontend**: Start the React development server:
      ```bash
